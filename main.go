@@ -1,5 +1,7 @@
 package main
 
+import "server"
+
 type card struct {
 	id          int
 	name        string
@@ -9,4 +11,9 @@ type card struct {
 	defence_pwr int
 	description string
 	quote       string
+}
+
+func main() {
+	s := server.NewServer()
+	s.Run()
 }
